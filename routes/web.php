@@ -25,6 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'isAdmin'])->group(function() {
     Route::get('/admin',function(){
-        return ('Page Admin');
+        return view('layouts.admin');
     });
 });
