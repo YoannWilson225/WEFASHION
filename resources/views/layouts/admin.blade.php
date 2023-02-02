@@ -1,9 +1,33 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset('adminCss/style.css') }}" rel="stylesheet">
+
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+</head>
+<body>
+@include('layouts.inc.adminNavbar')
 <div class="container">
+    <div class="flex__message">
+        <h1 class="welcome">Bienvenue <span class="bold">{{ Auth::user()->name }}</span>, vous pouvez ajouter ou supprimer
+        un produit ici.</h1>
+        <a href="" id="new" class="btn btn-outline-success">Nouveau</a>
+    </div>
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-11">
             <div class="card">
                 <div class="card-header">{{ __('Listes des produits') }}</div>
 
@@ -27,8 +51,8 @@
                                 <td>20£</td>
                                 <td>Solde</td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Edit</a>
-                                    <a href="" class="btn btn-danger">Supprimer</a>
+                                    <a href="" class="btn btn-outline-primary">Edit</a>
+                                    <a href="" class="btn btn-outline-danger">Supprimer</a>
                                 </td>
                             </tr>
                             <tr>
@@ -38,8 +62,8 @@
                                 <td>30£</td>
                                 <td>Standard</td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Edit</a>
-                                    <a href="" class="btn btn-danger">Supprimer</a>
+                                    <a href="" class="btn btn-outline-primary">Edit</a>
+                                    <a href="" class="btn btn-outline-danger">Supprimer</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -49,4 +73,5 @@
         </div>
     </div>
 </div>
-@endsection
+</body>
+</html>

@@ -1,0 +1,31 @@
+.welcome{
+    margin-left: 50px;
+    margin-top:50px;
+    font-size: 1.3rem;
+}
+
+#new {
+    margin-left :89%;
+    margin-bottom :2%;
+    margin-top :2%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .welcome{
+        margin-left :0;
+        margin-top:50px;
+        font-size: 1.2rem;
+    }
+
+    #new {
+        margin-left :82%;
+    }
+
+}
