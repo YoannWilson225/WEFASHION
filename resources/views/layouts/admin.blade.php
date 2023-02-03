@@ -48,7 +48,7 @@
                                 <th scope="row">1</th>
                                 <td>Polo</td>
                                 <td>Femme</td>
-                                <td>20£</td>
+                                <td>20€</td>
                                 <td>Solde</td>
                                 <td>
                                     <a href="" class="btn btn-outline-primary">Edit</a>
@@ -59,7 +59,7 @@
                                 <th scope="row">2</th>
                                 <td>Pull Over</td>
                                 <td>Homme</td>
-                                <td>30£</td>
+                                <td>30€</td>
                                 <td>Standard</td>
                                 <td>
                                     <a href="" class="btn btn-outline-primary">Edit</a>

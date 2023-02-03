@@ -27,7 +27,7 @@
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <img src="{{asset('images/yoyo.jpg')}}" width="40" height="40" class="rounded-circle">
+                        <img src="{{asset('images/adminAvatar/yoyo.jpg')}}" width="40" height="40" class="rounded-circle">
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"

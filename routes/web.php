@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
+// use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +24,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [CategoryController::class, 'index'])->name('home');
+// Route::get('home', function () {
+//     return view('home');
+// });
+
+
+Route::resource('home', CategoryController::class);
 
 
 Route::middleware(['auth', 'isAdmin'])->group(function() {
-    Route::get('/admin',function(){
-        return view('layouts.admin');
-    })->name('admin');
+    // Route::get('/admin',function(){
+    //     return view('layouts.admin');
+    // })->name('admin');
+
+    Route::resource('admin', ProductController::class);
 });
