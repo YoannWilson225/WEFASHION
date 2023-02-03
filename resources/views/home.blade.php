@@ -16,6 +16,10 @@
 
                     Bonjour {{ Auth::user()->name }}
                     {{ __('vous êtes bien connecté !') }}
+
+                    @foreach ($category as $cate)
+                        {{$cate->name}}
+                    @endforeach
                 </div>
             </div>
         </div>
