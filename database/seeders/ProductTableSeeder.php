@@ -5,8 +5,7 @@ namespace Database\Seeders;
 use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
-use Illuminate\Support\Facades\DB;
+
 
 class ProductTableSeeder extends Seeder
 {
@@ -38,7 +37,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XS";
         $product->image = "hom (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -50,7 +49,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -62,7 +61,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -74,7 +73,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "L";
         $product->image = "hom (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -86,7 +85,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -98,7 +97,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (6).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -110,7 +109,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -122,7 +121,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -134,7 +133,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -146,7 +145,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -164,7 +163,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XS";
         $product->image = "hom (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -176,7 +175,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -188,7 +187,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -200,7 +199,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "L";
         $product->image = "hom (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -212,7 +211,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -224,7 +223,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (6).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -236,7 +235,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -248,7 +247,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -260,7 +259,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -272,7 +271,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -289,7 +288,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XS";
         $product->image = "hom (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -301,7 +300,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -313,7 +312,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -325,7 +324,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "L";
         $product->image = "hom (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -337,7 +336,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -349,7 +348,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (6).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -361,7 +360,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -373,7 +372,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -385,7 +384,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -397,7 +396,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -414,7 +413,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XS";
         $product->image = "hom (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -426,7 +425,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -438,7 +437,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -450,7 +449,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "L";
         $product->image = "hom (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -462,7 +461,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -474,7 +473,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "S";
         $product->image = "hom (6).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -486,7 +485,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -498,7 +497,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -510,7 +509,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "XL";
         $product->image = "hom (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -522,7 +521,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(10,80);
         $product->taille = "M";
         $product->image = "hom (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -542,7 +541,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -554,7 +553,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -566,7 +565,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -578,7 +577,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -590,7 +589,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -602,7 +601,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "S";
         $product->image = "fem (6).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -614,7 +613,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -626,7 +625,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -638,7 +637,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -650,7 +649,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -668,7 +667,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -680,7 +679,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -692,7 +691,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -704,7 +703,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -716,7 +715,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -728,7 +727,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "S";
         $product->image = "fem (6).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -740,7 +739,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -752,7 +751,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -764,7 +763,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -776,7 +775,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -792,7 +791,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -804,7 +803,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -816,7 +815,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -828,7 +827,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -840,7 +839,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -852,7 +851,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "S";
         $product->image = "fem (6).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -864,7 +863,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -876,7 +875,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -888,7 +887,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -900,7 +899,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -916,7 +915,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (1).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -928,7 +927,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (2).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -940,7 +939,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (3).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -952,7 +951,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (4).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -964,7 +963,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (5).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -976,7 +975,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "S";
         $product->image = "fem (6).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -988,7 +987,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XL";
         $product->image = "fem (7).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -1000,7 +999,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "L";
         $product->image = "fem (8).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -1012,7 +1011,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "XS";
         $product->image = "fem (9).jpg";
-        $product->status = "non_publié";
+        $product->is_online = 0;
         $product->etat = "solde";
         $product->reference = genererChaineAleatoire(16);
         $product->save();
@@ -1024,7 +1023,7 @@ class ProductTableSeeder extends Seeder
         $product->prix = rand(8,56);
         $product->taille = "M";
         $product->image = "fem (10).jpg";
-        $product->status = "publié";
+        $product->is_online = 1;
         $product->etat = "standard";
         $product->reference = genererChaineAleatoire(16);
         $product->save();

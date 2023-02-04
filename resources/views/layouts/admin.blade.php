@@ -24,18 +24,16 @@
     <div class="flex__message">
         <h1 class="welcome">Bienvenue <span class="bold">{{ Auth::user()->name }}</span>, vous pouvez ajouter ou supprimer
         un produit ici.</h1>
-        <a href="" id="new" class="btn btn-outline-success">Nouveau</a>
+        <a href="{{ route ('admin.create')}}" id="new" class="btn btn-outline-success">Nouveau</a>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-11">
             <div class="card">
                 <div class="card-header">{{ __('Listes des produits') }}</div>
-
                 <div class="card-body">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Nom</th>
                                 <th scope="col">Catégorie</th>
                                 <th scope="col">Prix</th>
@@ -44,34 +42,29 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($products as $product)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Polo</td>
-                                <td>Femme</td>
-                                <td>20€</td>
-                                <td>Solde</td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->category->name}}</td>
+                                <td>{{$product->prix}}€</td>
+                                <td>{{$product->etat}}</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-primary">Edit</a>
+                                    <a href="{{route('admin.edit',$id)}}" class="btn btn-outline-primary">Edit</a>
                                     <a href="" class="btn btn-outline-danger">Supprimer</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Pull Over</td>
-                                <td>Homme</td>
-                                <td>30€</td>
-                                <td>Standard</td>
-                                <td>
-                                    <a href="" class="btn btn-outline-primary">Edit</a>
-                                    <a href="" class="btn btn-outline-danger">Supprimer</a>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="col-md-12">
+    <ul class="pages">
+      <li>{{$products->links()}}</li>
+    </ul>
 </div>
 </body>
 </html>
