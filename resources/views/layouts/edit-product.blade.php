@@ -13,7 +13,7 @@ function genererChaineAleatoire($longueur = 5)
 @endphp
 
 <div class="card-body">
-    <form action="{{route('admin.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{url ('update-product/'.$products->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-12 mb-3">
@@ -42,7 +42,7 @@ function genererChaineAleatoire($longueur = 5)
             </div>
             <div class="col-md-6 mb-3">
                 <label for="">Is_online</label>
-                <input type="checkbox" name="is_online">
+                <input type="checkbox" name="is_online" {{ $products->is_online == "1" ? 'checked':'' }}>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="">Etat</label>

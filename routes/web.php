@@ -37,5 +37,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function() {
     //     return view('layouts.admin');
     // })->name('admin');
 
+
     Route::resource('admin', ProductController::class);
+
+    Route::get('edit-product/{id}', [ProductController::class, 'edit']);
+
+    Route::post('update-product/{id}', [ProductController::class, 'update']);
+
+    Route::get('delete-product/{id}', [ProductController::class, 'destroy']);
+
 });
