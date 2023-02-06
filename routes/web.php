@@ -29,9 +29,15 @@ Auth::routes();
 //     return view('home');
 // });
 
-
+Route::get('/', [ViewController::class, 'showData']);
 Route::get('home', [ViewController::class, 'showData'])->name('home');
 Route::get('view/{id}', [ViewController::class, 'productView'])->name('viewProduct');
+Route::get('viewbycategory/{id}', [ViewController::class, 'viewByCategory'])->name('viewByCategory');
+
+// Route::get('home/femme', [ViewController::class, 'viewFemme'])->name('viewFemme');
+// Route::get('home/homme', [ViewController::class, 'viewHomme'])->name('viewHomme');
+
+
 
 
 Route::middleware(['auth', 'isAdmin'])->group(function() {

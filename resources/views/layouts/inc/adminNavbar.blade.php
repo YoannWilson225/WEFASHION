@@ -1,7 +1,7 @@
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <a class="navbar-brand">{{ config('app.name', 'Laravel') }}</a>
-        <a class="navbar-brand" href="#" style="font-size: 15px;">PRODUITS</a>
+        <a class="navbar-brand" href="{{url('/')}}" style="font-size: 15px;">PRODUITS</a>
         <a class="navbar-brand" href="#" style="font-size: 15px;">CATEGORIES</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
