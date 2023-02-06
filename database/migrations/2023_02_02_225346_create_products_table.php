@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('etat');
             $table->string('reference');
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

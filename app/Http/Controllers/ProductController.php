@@ -21,7 +21,7 @@ class ProductController extends Controller
         $products = Product::paginate(16);
         $categories = new Category;
         $categories = Category::all();
-        return view('layouts.admin', compact('products','categories'));
+        return view('layouts.admin.index', compact('products','categories'));
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductController extends Controller
         $products = Product::paginate(16);
         $categories = new Category;
         $categories = Category::all();
-        return view('layouts.add-product', compact('products','categories'));
+        return view('layouts.admin.add-product', compact('products','categories'));
     }
 
     /**
@@ -91,7 +91,7 @@ class ProductController extends Controller
         $categories = new Category;
         $categories = Category::all();
         $products = Product::find($id);
-        return view('layouts.edit-product', compact('products','categories'));
+        return view('layouts.admin.edit-product', compact('products','categories'));
     }
 
     /**
@@ -115,10 +115,10 @@ class ProductController extends Controller
             }
 
             $file = $request->file('image');
-         $ext = $file ->getClientOriginalExtension();
-         $filename = time().'.'.$ext;
-         $file->move('assets/uploads/',$filename);
-         $products->image = $filename;
+            $ext = $file ->getClientOriginalExtension();
+            $filename = time().'.'.$ext;
+            $file->move('assets/uploads/',$filename);
+            $products->image = $filename;
     }
 
     $products->category_id = $request->input('category_id');

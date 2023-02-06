@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ViewController;
 
 // use App\Http\Controllers\ProductController;
 
@@ -29,7 +30,8 @@ Auth::routes();
 // });
 
 
-Route::resource('home', CategoryController::class);
+Route::get('home', [ViewController::class, 'showData'])->name('home');
+Route::get('view/{id}', [ViewController::class, 'productView'])->name('viewProduct');
 
 
 Route::middleware(['auth', 'isAdmin'])->group(function() {
