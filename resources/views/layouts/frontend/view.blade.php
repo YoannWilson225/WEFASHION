@@ -1,4 +1,4 @@
-
+@extends('layouts.app')
 <section class="section" id="product">
     <div class="container">
         <div class="row">
@@ -23,9 +23,14 @@
                 </div>
                 <div class="quantity-content">
                     <div class="right-content">
-                        <div class="sizes mt-5">
-                            <h6 class="text-uppercase">Size</h6> <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label> <label class="radio"> <input type="radio" name="size" value="L"> <span>L</span> </label> <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
-                        </div>
+                        <select name="" id="">
+                            <option value="">Taille</option>
+                            <option value="">XS</option>
+                            <option value="">S</option>
+                            <option value="">M</option>
+                            <option value="">L</option>
+                            <option value="">XL</option>
+                          </select>
                     </div>
                 </div>
                 <div class="total">
